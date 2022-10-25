@@ -25,17 +25,21 @@ const Header = () => {
           <Link to='/faq' className='mr-5 hover:text-gray-900'>
             Faq
           </Link>
-          <button  className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 mr-2'>
+          <button  className='btn btn-outline btn-error mr-2'>
             Logout
             
           </button>
-
-          <Link to='/lognin' className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 mr-2'>
-            Login
-          </Link>
-          <Link to='/register' className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>
-            Register
-          </Link>
+          <button className='btn btn-outline btn-primary mr-2'>
+            <Link to='/lognin'>
+              Login
+            </Link>
+          </button>
+          <button className='btn btn-outline btn-secondary'>
+            <Link to='/register'>
+              Register
+            </Link>
+          </button>
+          
         </nav>
       </div>
     );

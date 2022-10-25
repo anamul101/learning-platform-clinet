@@ -7,9 +7,6 @@ import Faq from "../../Pages/FAQ/Faq";
 import LognIn from "../../Pages/LognIn/LognIn";
 import Register from "../../Pages/Register/Register";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPase";
-import CourseName from "../../Sheards/CourseName/CourseName";
-import CouresDetails from "../../Sheards/CourseDetails/CouresDetails";
-import Header from "../../Sheards/Header/Header";
 import Details from "../../Pages/Details/Details";
 import Chekout from "../../Pages/Chekout/Chekout";
 
