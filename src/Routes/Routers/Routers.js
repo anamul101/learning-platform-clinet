@@ -6,11 +6,13 @@ import Blog from "../../Pages/Blog/Blog";
 import Faq from "../../Pages/FAQ/Faq";
 import LognIn from "../../Pages/LognIn/LognIn";
 import Register from "../../Pages/Register/Register";
+import ErrorPage from "../../Pages/ErrorPage/ErrorPase";
 
 export const router = createBrowserRouter([
     {
        path:'/',
        element:<Main></Main>,
+       errorElement:<ErrorPage></ErrorPage>,
        children:[
         {
             path:'/home',
