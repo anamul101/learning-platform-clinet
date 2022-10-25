@@ -7,6 +7,10 @@ import Faq from "../../Pages/FAQ/Faq";
 import LognIn from "../../Pages/LognIn/LognIn";
 import Register from "../../Pages/Register/Register";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPase";
+import CourseName from "../../Sheards/CourseName/CourseName";
+import CouresDetails from "../../Sheards/CourseDetails/CouresDetails";
+import Header from "../../Sheards/Header/Header";
+import Details from "../../Pages/Details/Details";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +28,7 @@ export const router = createBrowserRouter([
         },
         {
             path:'/course',
+            loader: ()=>fetch('http://localhost:5000/courses'),
             element:<Courses></Courses>
         },
         {
@@ -42,6 +47,12 @@ export const router = createBrowserRouter([
             path:'/Register',
             element:<Register></Register>
         },
+        {
+            path:'/details/:id',
+            loader: ({params})=>fetch(`http://localhost:5000/courses/${params.id}`),
+            element:<Details></Details>
+        }
+        
        ] 
     }
 ])

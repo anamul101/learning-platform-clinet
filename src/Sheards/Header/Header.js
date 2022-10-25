@@ -9,7 +9,7 @@ const Header = () => {
           className='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0'
         >
           
-          <span className='ml-3 text-xl'>AuthenTech</span>
+          <span className='ml-3 text-xl'>Programming Course</span>
         </Link>
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
           <Link to='/home' className='mr-5 hover:text-gray-900'>

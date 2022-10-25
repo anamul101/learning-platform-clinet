@@ -1,10 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-const CourseName = () => {
+
+const CourseName = ({titles}) => {
+    
     return (
-        <div>
-            <h1>Course Name</h1>
+        <div className=''>
+            <h1>{titles.title}</h1>
+           
         </div>
     );
 };
