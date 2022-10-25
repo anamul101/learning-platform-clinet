@@ -11,6 +11,7 @@ import CourseName from "../../Sheards/CourseName/CourseName";
 import CouresDetails from "../../Sheards/CourseDetails/CouresDetails";
 import Header from "../../Sheards/Header/Header";
 import Details from "../../Pages/Details/Details";
+import Chekout from "../../Pages/Chekout/Chekout";
 
 export const router = createBrowserRouter([
     {
@@ -51,8 +52,12 @@ export const router = createBrowserRouter([
             path:'/details/:id',
             loader: ({params})=>fetch(`http://localhost:5000/courses/${params.id}`),
             element:<Details></Details>
-        }
-        
+        },
+        {
+            path:'/chekout/:id',
+            loader: ({params})=>fetch(`http://localhost:5000/courses/${params.id}`),
+            element:<Chekout></Chekout>
+        },
        ] 
     }
 ])

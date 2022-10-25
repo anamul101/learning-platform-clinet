@@ -1,0 +1,20 @@
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+
+const Chekout = () => {
+    const chekout = useLoaderData();
+    const {title,description,category,image,price,id} = chekout;
+    return (
+        <div className="card w-96 bg-primary text-primary-content mx-auto mt-40">
+            <div className="card-body">
+                <h2 className="card-title">{title}</h2>
+                <p>Course Price: {price}</p>
+                <div className="card-actions justify-end">
+                <button className="btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Chekout;
