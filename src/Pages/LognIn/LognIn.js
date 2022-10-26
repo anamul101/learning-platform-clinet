@@ -1,11 +1,13 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const LognIn = () => {
-  const {authLognIn,authSignInGoogle, authSignInGithub,setUser} = useContext(AuthContext);
+  const [reserPassword, setResetPassword] = useState('');
+  const {authLognIn,authSignInGoogle, authSignInGithub,setUser,setLoader,forgetPassword} = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const navigate = useNavigate();
@@ -29,7 +31,19 @@ const LognIn = () => {
       })
       .catch(error=>{
         console.error(error);
+        form.reset();
       })
+      .finally(()=>{
+        setLoader(false)
+    })
+  }
+  // Reset Password Handela
+  const handelaReset = ()=>{
+     forgetPassword(reserPassword)
+      .then(()=>{
+        toast.success('Reset password link send your email. Please chack email')
+      })
+      .catch(error=>console.error(error))
   }
   // Handel Google
   const handelGoogleSignIn = ()=>{
@@ -68,6 +82,7 @@ const LognIn = () => {
                 Email address
               </label>
               <input
+                onBlur={(e)=>setResetPassword(e.target.value)}
                 type='email'
                 name='email'
                 id='email'
@@ -101,11 +116,7 @@ const LognIn = () => {
             </button>
           </div>
         </form>
-        <div className='space-y-1'>
-          <button className='text-sm hover:underline text-blue-700'>
-            Forgot password
-          </button>
-        </div>
+        
         <div className='flex items-center pt-4 space-x-1'>
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
           <p className='px-3 text-1xl dark:text-gray-400'>
@@ -135,11 +146,16 @@ const LognIn = () => {
         </div>
         <p className='px-6 text-center text-1xl'>
           Don't have an account?
-          <Link to='/register' className='hover:underline hovext-blue-700 ml-2'>
-            Registerr:te
+          <Link to='/register' className='hover:underline hover:text-blue-700 ml-2'>
+            Registerr
           </Link>
           .
         </p>
+        <div className='space-y-1 mx-auto'>
+          <button onClick={handelaReset} className='text-bold text-center mt-2 hover:underline text-blue-700'>
+            Forgot password
+          </button>
+        </div>
       </div>
     </div>
     );

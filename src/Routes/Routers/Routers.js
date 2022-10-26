@@ -9,6 +9,7 @@ import Register from "../../Pages/Register/Register";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPase";
 import Details from "../../Pages/Details/Details";
 import Chekout from "../../Pages/Chekout/Chekout";
+import PrivetRouters from "../PrivetRouters/PrivetRouters";
 
 export const router = createBrowserRouter([
     {
@@ -53,7 +54,7 @@ export const router = createBrowserRouter([
         {
             path:'/chekout/:id',
             loader: ({params})=>fetch(`https://b610-learning-platform-server-side-seven.vercel.app/courses/${params.id}`),
-            element:<Chekout></Chekout>
+            element:<PrivetRouters><Chekout></Chekout></PrivetRouters>
         },
        ] 
     }

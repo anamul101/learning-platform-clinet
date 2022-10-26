@@ -1,12 +1,14 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2'
 import toast from 'react-hot-toast';
+import { fromJSON } from 'postcss';
 
 const Register = () => {
+  const [error, setError] = useState('');
   const {createUser,authUpdate,verifiEmail,authSignInGoogle, authSignInGithub,setUser} = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
@@ -22,6 +24,10 @@ const Register = () => {
     const email =form.email.value;
     const password = form.password.value;
 
+   // Validation password
+   if(password.length < 6){
+      setError('Should be given at least password 6 carectar or more')
+   }
   //  Create User Id;
     createUser(email,password)
       .then(result=>{
@@ -35,10 +41,11 @@ const Register = () => {
           'success'
         )
         navigate('/lognin');
-        console.log(user)
+        setError('');
       })
       .catch(error=>{
-        console.error(error);
+        setError(error.message);
+        form.reset();
       })
   }
   // upDATE Profile
@@ -98,6 +105,7 @@ const verifyUserEmail=()=>{
                 placeholder='First Name'
                 className='w-full px-3 py-2 border rounded-md border-gray-300'
                 data-temp-mail-org='0'
+                required
               />
             </div>
             <div>
@@ -110,6 +118,7 @@ const verifyUserEmail=()=>{
                 placeholder='Enter Your PhotoUrl'
                 className='w-full px-3 py-2 border rounded-md border-gray-300'
                 data-temp-mail-org='0'
+                required
               />
             </div>
             <div>
@@ -122,6 +131,7 @@ const verifyUserEmail=()=>{
                 placeholder='Enter Your Email'
                 className='w-full px-3 py-2 border rounded-md border-gray-300 '
                 data-temp-mail-org='0'
+                required
               />
             </div>
             <div>
@@ -136,8 +146,12 @@ const verifyUserEmail=()=>{
                 id='password'
                 placeholder='Password'
                 className='w-full px-3 py-2 border rounded-md border-gray-300'
+                required
               />
             </div>
+          </div>
+          <div>
+              <p className='text-center text-sm text-red-800'>{error}</p>
           </div>
           <div className='space-y-2'>
             <div>
