@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 
 
 const CourseName = ({titles}) => {
     
     return (
-        <div className=' text-white'>
+        <div className=' text-white mt-3'>
             
-            <h1 className="mt-2 text-bold">{titles.title}</h1>
+            <Link to={`/details/${titles.id}`} className="mt-2 hover:text-blue-600 text-bold">{titles.title}</Link>
            
         </div>
     );

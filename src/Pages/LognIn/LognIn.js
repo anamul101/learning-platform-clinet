@@ -42,6 +42,7 @@ const LognIn = () => {
      forgetPassword(reserPassword)
       .then(()=>{
         toast.success('Reset password link send your email. Please chack email')
+        
       })
       .catch(error=>console.error(error))
   }
@@ -50,6 +51,7 @@ const LognIn = () => {
     authSignInGoogle(googleProvider)
       .then((result)=>{
         const user = result.user;
+        navigate(from,{replace: true});
         console.log(user)
       })
       .catch(error=>console.error(error))
@@ -60,6 +62,7 @@ const LognIn = () => {
         .then(result=>{
           const user = result.user;
           setUser(user);
+          navigate(from,{replace: true});
           console.log(user);
         })
         .catch(error=>console.error(error))
