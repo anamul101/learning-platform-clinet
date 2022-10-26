@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
         },
         {
             path:'/course',
-            loader: ()=>fetch('http://localhost:5000/courses'),
+            loader: ()=>fetch('https://b610-learning-platform-server-side-seven.vercel.app/courses'),
             element:<Courses></Courses>
         },
         {
@@ -47,12 +47,12 @@ export const router = createBrowserRouter([
         },
         {
             path:'/details/:id',
-            loader: ({params})=>fetch(`http://localhost:5000/courses/${params.id}`),
+            loader: ({params})=>fetch(`https://b610-learning-platform-server-side-seven.vercel.app/courses/${params.id}`),
             element:<Details></Details>
         },
         {
             path:'/chekout/:id',
-            loader: ({params})=>fetch(`http://localhost:5000/courses/${params.id}`),
+            loader: ({params})=>fetch(`https://b610-learning-platform-server-side-seven.vercel.app/courses/${params.id}`),
             element:<Chekout></Chekout>
         },
        ] 

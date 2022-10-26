@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import image from '../../../src/Assets/logo.png'
 
 const Header = () => {
     return (
@@ -8,8 +9,8 @@ const Header = () => {
           to='/'
           className='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0'
         >
-          
-          <span className='ml-3 text-xl'>Programming Course</span>
+          <img className='w-15 h-10 rounded-md' src={image} alt="" />
+          <span className='ml-3 text-4xl text-bold'><span className='text-blue-800'>ES6</span> Tutorial</span>
         </Link>
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
           <Link to='/home' className='mr-5 hover:text-gray-900'>
