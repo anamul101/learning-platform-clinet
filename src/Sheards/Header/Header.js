@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import ReactSwitch from 'react-switch';
 import image from '../../../src/Assets/logo.png'
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
@@ -35,6 +36,7 @@ const Header = () => {
           <Link to='/faq' className='mr-5 hover:text-gray-900'>
             Faq
           </Link>
+          <div className='mr-3 mt-2'><ReactSwitch></ReactSwitch></div>
           <>
             {
               user?.uid?
