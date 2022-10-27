@@ -14,9 +14,9 @@ const ErrorPage = () => {
             Sorry, we couldn't find this page. please try another page.
           </p>
           <Link to='/'
-            className='px-8 py-3 font-semibold rounded bg-red-700 text-yellow-50'
+            className='px-8 py-3 font-semibold bg-red-700 text-yellow-50'
           >
-            Back homepage
+           homepage
           </Link>
         </div>
       </div>

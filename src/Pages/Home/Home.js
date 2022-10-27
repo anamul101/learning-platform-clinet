@@ -7,7 +7,7 @@ const Home = () => {
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content">
                 <div className="max-w-md">
-                <h1 className="text-5xl font-bold">Beginner Javascript Courses</h1>
+                <h1 className="text-5xl font-bold"> <span className='text-blue-700'>Beginner Javascript</span> <br /> ES6 Courses</h1>
                 <p className="py-6">But which JavaScript resource is for you? We’ve compiled a list of the best resources to learn JavaScript for free, whether you’re just starting out or you already know how to use booleans, strings, and data structures</p>
                 
                 <button className="btn btn-primary inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">

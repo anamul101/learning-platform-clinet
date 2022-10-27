@@ -24,17 +24,17 @@ const Header = () => {
         </Link>
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
           <Link to='/home' className='mr-5 hover:text-gray-900'>
-            Home
+            HOME
           </Link>
 
           <Link to='/course' className='mr-5 hover:text-gray-900'>
-            Courses
+            COURSES
           </Link>
           <Link to='/blog' className='mr-5 hover:text-gray-900'>
-            Blog
+            BLOG
           </Link>
           <Link to='/faq' className='mr-5 hover:text-gray-900'>
-            Faq
+            FAQ
           </Link>
           <div className='mr-3 mt-2'><ReactSwitch></ReactSwitch></div>
           <>
