@@ -5,7 +5,7 @@ const Faq = () => {
         <>
          <h1 className='text-center font-bold text-4xl text-dark text-blue-700 mt-8'>ES6 Interview Questions (FAQ)</h1>
          <div className="divider"></div>
-        <div className='mx-40 my-20'>
+        <div className='lg:mx-40 my-10'>
             <div tabIndex={0} className="collapse collapse-arrow mb-4 border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                 How can I use ES6 today?
