@@ -1,11 +1,10 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2'
 import toast from 'react-hot-toast';
-import { fromJSON } from 'postcss';
 
 const Register = () => {
   const [error, setError] = useState('');
@@ -13,6 +12,8 @@ const Register = () => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const navigate = useNavigate();
+  const location = useLocation();
+  const from= location.state?.from?.pathname ||'/'
 
   // Submit Handela
 
@@ -40,7 +41,7 @@ const Register = () => {
           'Chack Your spam folder for email verify!',
           'success'
         )
-        navigate('/lognin');
+        navigate(from,{replace: true}); 
         setError('');
       })
       .catch(error=>{
@@ -68,7 +69,7 @@ const verifyUserEmail=()=>{
     authSignInGoogle(googleProvider)
       .then((result)=>{
         const user = result.user;
-        navigate('/'); 
+        navigate(from,{replace: true});  
       })
       .catch(error=>console.error(error))
   }
@@ -78,7 +79,7 @@ const verifyUserEmail=()=>{
         .then(result=>{
           const user = result.user;
           setUser(user);
-          navigate('/'); 
+          navigate(from,{replace: true}); 
         })
         .catch(error=>console.error(error))
   }

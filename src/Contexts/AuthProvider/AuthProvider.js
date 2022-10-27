@@ -32,6 +32,7 @@ const AuthProvider = ({children}) => {
     }
     // ubdate Profile
     const authUpdate = (profile)=>{
+        setLoader(true);
         return updateProfile(auth.currentUser,profile);
     }
     // email verification

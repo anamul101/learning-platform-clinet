@@ -8,7 +8,7 @@ const Courses = () => {
     return (
         <>
             <h1 className="text-center font-bold text-4xl text-dark mt-8"> <span className='text-blue-700'>Total Course: </span>{allCourse.length}</h1>
-             <div className="divider">OR</div>
+             <div className="divider"></div>
             <div className='flex mt-12'>
             
                 <div className='w-1/5 p-8 mr-12 bg-stone-700'>

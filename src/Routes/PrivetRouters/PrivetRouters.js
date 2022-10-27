@@ -8,7 +8,7 @@ const PrivetRouters = ({children}) => {
     const location = useLocation();
 
     if(loader){
-        return  <div>Loading...</div>
+        return  <div className="w-16 h-16 mx-auto border-4 border-dashed rounded-full animate-spin dark border-green-700 mt-20"></div>
     }
     if(!user){
         return <Navigate to='/lognin' state={{from: location}} replace></Navigate>

@@ -10,7 +10,7 @@ const Chekout = () => {
     return (
         <>
         <h1 className='text-center font-bold text-4xl text-dark text-blue-700 mt-8'>Checkout</h1>
-         <div className="divider">OR</div>
+         <div className="divider"></div>
                 {/* ============================================================================ */}
         <div className='flex justify-between mt-12 mx-20'>
             
@@ -57,7 +57,7 @@ const Chekout = () => {
             </div>
             {/* ================================================================================ */}
             <div className='border rounded-md py-8 ml-8 w-3/5 rboder-2 border-indigo-600 '>
-            <h1 className='text-3xl text-bold text-center mb-3 text-orange-600'>Your Selected Course</h1>
+            <h1 className='text-3xl text-bold text-center mb-3 text-orange-600'>Your Course ID : <span className='text-blue-600'>{id}</span></h1>
             <div className="card w-96 mx-auto bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title text-3xl text-samibold">{title}</h2>
