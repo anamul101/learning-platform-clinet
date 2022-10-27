@@ -43,7 +43,7 @@ const Register = () => {
           'Chack Your spam folder for email verify!',
           'success'
         )
-        navigate(from,{replace: true}); 
+        navigate('/lognin'); 
         setError('');
       })
       .catch(error=>{
