@@ -55,7 +55,7 @@ const Blog = () => {
                     <p>Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine). Node.js was developed by Ryan Dahl in 2009 and its latest version is v0.10.36. Node.js also provides a rich library of various JavaScript modules which simplifies the development of web applications using Node.js to a great extent.</p>
                     
                     <h1 className='card-title'> How does Node work?</h1>
-                    <p>Node JS Web Server internally maintains a Limited Thread pool to provide services to the Client Requests. Node JS Web Server receives those requests and places them into a Queue. It is known as “Event Queue”. Node JS Web Server internally has a Component, known as “Event Loop”.Aug 3, 2022</p>
+                    <p>1.Node JS Web Server internally maintains a Limited Thread pool to provide services to the Client Requests. <br /> 2. Node JS Web Server receives those requests and places them into a Queue. It is known as “Event Queue”. <br />3. Node JS Web Server internally has a Component, known as “Event Loop”.Aug 3, 2022</p>
                 </div>
             </div>
         </div>

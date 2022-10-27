@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const LognIn = () => {
+  const [erorr, setError] = useState('')
   const [reserPassword, setResetPassword] = useState('');
   const {authLognIn,authSignInGoogle, authSignInGithub,setUser,setLoader,forgetPassword} = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
@@ -27,14 +28,14 @@ const LognIn = () => {
         form.reset();
         toast.success('SignIn Successfull');
         navigate(from,{replace: true}); 
-        console.log(user)
       })
       .catch(error=>{
-        console.error(error);
+        const showError = error.message;
+        setError(toast.error(showError));
         form.reset();
       })
       .finally(()=>{
-        setLoader(false)
+        setLoader(false);
     })
   }
   // Reset Password Handela
@@ -44,7 +45,10 @@ const LognIn = () => {
         toast.success('Reset password link send your email. Please chack email')
         
       })
-      .catch(error=>console.error(error))
+      .catch(error=>{
+        const showError = error.message;
+        setError(toast.error(showError));
+      })
   }
   // Handel Google
   const handelGoogleSignIn = ()=>{
@@ -53,7 +57,10 @@ const LognIn = () => {
         const user = result.user;
         navigate(from,{replace: true});
       })
-      .catch(error=>console.error(error))
+      .catch(error=>{
+        const showError = error.message;
+        setError(toast.error(showError));
+      })
   }
   // Handela GitHub 
   const handelaGithubSignIn = () =>{
@@ -63,7 +70,10 @@ const LognIn = () => {
           setUser(user);
           navigate(from,{replace: true});
         })
-        .catch(error=>console.error(error))
+        .catch(error=>{
+          const showError = error.message;
+        setError(toast.error(showError));
+        })
   }
     return (
         <div className='flex justify-center items-center pt-8'>

@@ -29,6 +29,9 @@ const Register = () => {
    if(password.length < 6){
       setError('Should be given at least password 6 carectar or more')
    }
+   if(!/(?=.*[0-9])/.test(password)){
+        setError('provide 1 caracter number')
+   }
   //  Create User Id;
     createUser(email,password)
       .then(result=>{
@@ -46,7 +49,6 @@ const Register = () => {
       })
       .catch(error=>{
         setError(error.message);
-        form.reset();
       })
   }
   // upDATE Profile
@@ -57,12 +59,18 @@ const Register = () => {
     }
     authUpdate(userProfileDetails)
         .then(()=>{})
-        .catch(error=>console.error(error))
+        .catch(error=>{
+          const showError = error.message;
+          setError(toast.error(showError));
+        })
 }
 const verifyUserEmail=()=>{
     verifiEmail()
         .then(()=>{})
-        .catch(error=>console.error(error))
+        .catch(error=>{
+          const showError = error.message;
+          setError(toast.error(showError));
+        })
 }
   // Handel Google
   const handelGoogleSignIn = ()=>{
@@ -71,7 +79,10 @@ const verifyUserEmail=()=>{
         const user = result.user;
         navigate(from,{replace: true});  
       })
-      .catch(error=>console.error(error))
+      .catch(error=>{
+        const showError = error.message;
+        setError(toast.error(showError));
+      })
   }
   // Handela GitHub 
   const handelaGithubSignIn = () =>{
@@ -81,7 +92,10 @@ const verifyUserEmail=()=>{
           setUser(user);
           navigate(from,{replace: true}); 
         })
-        .catch(error=>console.error(error))
+        .catch(error=>{
+          const showError = error.message;
+          setError(toast.error(showError));
+        })
   }
     return (
         <div className='flex justify-center items-center pt-8'>

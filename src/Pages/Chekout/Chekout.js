@@ -1,5 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
@@ -7,6 +8,9 @@ const Chekout = () => {
     const chekout = useLoaderData();
     const {user} = useContext(AuthContext)
     const {title,description,category,image,price,id} = chekout;
+    const handelaConfirm =()=>{
+        toast.success('Thanks, your confirmtion is success!')
+    }
     return (
         <>
         <h1 className='text-center font-bold text-4xl text-dark text-blue-700 mt-8'>Checkout</h1>
@@ -64,7 +68,11 @@ const Chekout = () => {
                 </div>
                 <figure><img src={image} alt="Shoes" /></figure>
                 </div>
+                <div className='w-96 mx-auto'>
+                    <button onClick={handelaConfirm} className="btn btn-outline btn-primary mt-4">Confirm Course</button>
+                </div>
             </div>
+            
         </div>
        </>
     );
