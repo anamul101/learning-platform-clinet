@@ -1,6 +1,6 @@
 # 1.Website Name : ES6 Tutorial
 
-# 2.Live Link : 
+# 2.Live Link : https://es6-tutorial-1c39e.web.app/
 
 # 3.What is frameworks and libraries used in this website?
 
