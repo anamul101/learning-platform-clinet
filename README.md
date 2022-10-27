@@ -1,15 +1,15 @@
-# Website Name : ES6 Tutorial
+# 1.Website Name : ES6 Tutorial
 
-# Live Link : 
+# 2.Live Link : 
 
-# What is frameworks and libraries used in this website?
+# 3.What is frameworks and libraries used in this website?
 
- . Full site used javascript libray (React)
- . For design used Tailwind CSS and DaisyUI
- . For Routing used React Router
- . For Authentication used Firebase
- . For Aleart used React hot tost and SwetAlert
- . For Icon used React Icon
+## . Full site used javascript libray (React)
+## . For design used Tailwind CSS and DaisyUI
+## . For Routing used React Router
+## . For Authentication used Firebase
+## . For Aleart used React hot tost and SwetAlert
+## . For Icon used React Icon
 
 # Getting Started with Create React App
 
