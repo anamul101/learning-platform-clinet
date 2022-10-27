@@ -1,3 +1,16 @@
+# Website Name : ES6 Tutorial
+
+# Live Link : 
+
+# What is frameworks and libraries used in this website?
+
+## . Full site used javascript libray (React)
+## . For design used Tailwind CSS and DaisyUI
+## . For Routing used React Router
+## . For Authentication used Firebase
+## . For Aleart used React hot tost and SwetAlert
+## . For Icon used React Icon
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
