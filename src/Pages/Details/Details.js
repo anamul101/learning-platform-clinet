@@ -11,7 +11,7 @@ const Details = () => {
         <h1 className='text-center font-bold text-4xl text-dark text-blue-700 mt-8'>Course Details</h1>
         <div className="divider"></div>
 
-        <div className="card card-compact w-[500px] border border-indigo-600 bg-base-100 shadow-xl mx-auto mt-10">
+        <div className="card card-compact lg:w-[500px] border border-indigo-600 bg-base-100 shadow-xl mx-auto mt-10">
             <div className='flex justify-between items-center'>
                 <h2 className="card-title text-3xl text-bold py-4 ml-4">{title}</h2>
                 <FaDownload className='text-2xl text-bold cursor-pointer mr-8 text-red-500'></FaDownload>

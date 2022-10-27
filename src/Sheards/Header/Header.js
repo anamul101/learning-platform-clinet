@@ -23,7 +23,7 @@ const Header = () => {
           <span className='ml-3 text-4xl text-bold'><span className='text-blue-800'>ES6</span> Tutorial</span>
         </Link>
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
-          <Link to='/home' className='mr-5 hover:text-gray-900'>
+          <Link to='/home' className= 'mr-5 hover:text-gray-900'>
             HOME
           </Link>
 
