@@ -12,10 +12,7 @@ const About = () => {
                 <img src='https://www.cuelogic.com/wp-content/uploads/2021/06/Advantages-of-JavaScript-ES6-over-ES51.jpg' alt='parts' className="w-3/5 right-5 h-[250px] top-1/2 border-8 border-white absolute rounded-lg shadow-2xl" />
                 </div>
                 <div className='w-1/2'>
-                <h1 className="text-5xl font-bold my-5">
-                    We are qualified <br /> 
-                    & of experience <br />
-                    in this field</h1>
+                <h1 className="text-4xl font-bold my-5"> We are qualified <br /> & of experience in this field</h1>
                 <p className="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
 
                 <p className="py-6">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
